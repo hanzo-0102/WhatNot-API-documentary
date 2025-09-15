@@ -141,12 +141,12 @@ The following classes implement `GFunction`, each representing a specific functi
 | `GLinary` | Represents $$y = kx + b$$ function        | `float k, float b`          |
 | `GBinary` | Represents $$y = ax^2 + bx + c$$ function | `float a, float b, float c` |
 | `GPower` | Represents $$y = ax^n$$ function          | `float a, float n`          |
-| `GLogarithm` | Represents $$log_a x$$ function           | `float a`                   |
-| `GSin` | Represents $$a * sin(x)$$ function        | `float a`                   |
-| `GCos` | Represents $$a * cos(x)$$ function        | `float a`                   |
-| `GTan` | Represents $$a * tg(x)$$ function         | `float a`                   |
-| `GCtan` | Represents $$a * ctg(x)$$ function        | `float a`                   |
-| `GHyperbole` | Represents $$k / x + b$$ function       | `float k, float b`          |
+| `GLogarithm` | Represents $$y = log_a x$$ function           | `float a`                   |
+| `GSin` | Represents $$y = a * sin(x)$$ function        | `float a`                   |
+| `GCos` | Represents $$y = a * cos(x)$$ function        | `float a`                   |
+| `GTan` | Represents $$y = a * tg(x)$$ function         | `float a`                   |
+| `GCtan` | Represents $$y = a * ctg(x)$$ function        | `float a`                   |
+| `GHyperbole` | Represents $$y = k / x + b$$ function       | `float k, float b`          |
 
 ### Functions for each class
 
