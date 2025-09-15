@@ -24,6 +24,8 @@ The `Point` class provides functionality related to point operations in Euclidea
 
 #### `distanceTo()`
 
+**Returns:** `float`
+
 Distance to second point
 
 | Parameter | Description               |
@@ -44,6 +46,8 @@ The `Snail` class provides functionality related to operations with spiral, comi
 
 #### `getCircle()`
 
+**Returns:** `int`
+
 Get number of circle-layer from center
 
 | Parameter | Description    |
@@ -51,6 +55,8 @@ Get number of circle-layer from center
 | `int num` | Number of cell |
 
 #### `getCell()`
+
+**Returns:** `Point`
 
 Get `Point` class variable with coordinated of specific cell
 
@@ -66,6 +72,8 @@ The `TaskScheduler` class allows you to schedule tasks for running.
 
 #### `schedule()`
 
+**Returns:** nothing
+
 Add task to wait it's time
 
 | Parameter | Description                                  |
@@ -77,6 +85,8 @@ Add task to wait it's time
 
 #### `resetTimer()`
 
+**Returns:** nothing
+
 Resets timer variable
 
 ## Class `TooltipHelper`
@@ -86,6 +96,8 @@ The `TooltipHelper` class which allows you to add tooltip to any item in game.
 ### Methods
 
 #### `addTooltip()`
+
+**Returns:** nothing
 
 Adding tooltip to 
 
@@ -102,6 +114,8 @@ The `ClientMessageHelper` class provides functionality related to clientmessageh
 
 #### `sendNextTick()`
 
+**Returns:** nothing
+
 Adds message to queue before sending it to player's chat
 
 | Parameter | Description        |
@@ -109,6 +123,8 @@ Adds message to queue before sending it to player's chat
 | `Component message` | Message to display |
 
 #### `clearQueue()`
+
+**Returns:** nothing
 
 Clears queue of messages
 
@@ -130,11 +146,13 @@ The following classes implement `GFunction`, each representing a specific functi
 | `GCos` | Represents $$a * cos(x)$$ function        | `float a`                   |
 | `GTan` | Represents $$a * tg(x)$$ function         | `float a`                   |
 | `GCtan` | Represents $$a * ctg(x)$$ function        | `float a`                   |
-| `GHyperbole` | Represents $$ k / x + b $$ function       | `float k, float b`          |
+| `GHyperbole` | Represents $$k / x + b$$ function       | `float k, float b`          |
 
 ### Functions for each class
 
 #### `getY()`
+
+**Return:** `float`
 
 Gives you Y coordinate, based on X for your function. Or NULL if function is not existing on provided X
 
@@ -145,16 +163,32 @@ Gives you Y coordinate, based on X for your function. Or NULL if function is not
 
 #### `doesOn()`
 
+**Return:** `boolean`
+
 Checks if point is laying on your function graphic
 
 | Parameter     | Description        |
 |---------------|--------------------|
 | `Point point` | Point for checking |
 
+#### `intersection()`
+
+**Return:** `Point` or `null`
+
+Returns first point of intersection between two functions on given distance. Works up to 3 digits after point
+
+| Parameter     | Description        |
+|---------------|--------------------|
+| `GFunction sec` | Second function to compare |
+| `float start` | Begining of search |
+| `float end`| End of search |
+
 # Functions
 
 
 #### `newItemTag()`
+
+**Returns:** `TagKey<Item>`
 
 Returns created item tag within provided information
 
@@ -165,6 +199,8 @@ Returns created item tag within provided information
 
 #### `newBlockTag()`
 
+**Returns:** `TagKey<Block>`
+
 Returns created block tag within provided information
 
 | Parameter | Description             |
@@ -172,8 +208,31 @@ Returns created block tag within provided information
 | `String modid` | Mod id to create tag in |
 | `String name` | Tag name                |
 
+#### `newBiomeTag()`
+
+**Returns:** `TagKey<Biome>`
+
+Returns created biome tag within provided information
+
+| Parameter | Description             |
+|-----------|-------------------------|
+| `String modid` | Mod id to create tag in |
+| `String name` | Tag name                |
+
+#### `newEntityTypeTag()`
+
+**Returns:** `TagKey<EntityType<?>>`
+
+Returns created entity type tag within provided information
+
+| Parameter | Description             |
+|-----------|-------------------------|
+| `String modid` | Mod id to create tag in |
+| `String name` | Tag name                |
 
 #### `isModLoaded()`
+
+**Returns:** `boolean`
 
 Returns `true` if mod is loaded 
 
